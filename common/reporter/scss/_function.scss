@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@function get($map, $keys...) {
+	@each $key in $keys {
+		$map: map.get($map, $key);
+	}
+	@return $map;
+}
+
+/// For a given hue in a palette, return the contrast color from the map of contrast palettes.
+/// @param {Map} $palette The palette from which to extract a color.
+/// @param {String | Number} $hue The hue for which to get a contrast color.
+/// @returns {Color} The contrast color for the given palette and hue.
+@function get-contrast-color-from-palette($palette, $hue) {
+	@return map.get(map.get($palette, contrast), $hue);
+}
+
+/// Gets a color from a theme palette (the output of mat-palette).
+/// The hue can be one of the standard values (500, A400, etc.), one of the three preconfigured
+/// hues (default, lighter, darker), or any of the aforementioned prefixed with "-contrast".
+///
+/// @param {Map} $palette The palette from which to extract a color.
+/// @param {String | Number} $hue The hue from the palette to use. If this is a value between 0
+//     and 1, it will be treated as opacity.
+/// @param {Number} $opacity The alpha channel value for the color.
+/// @returns {Color} The color for the given palette, hue, and opacity.
+@function get-color-from-palette($palette, $hue: default, $opacity: null) {
+	// If hueKey is a number between zero and one, then it actually contains an
+	// opacity value, so recall this function with the default hue and that given opacity.
+	@if meta.type-of($hue) == number and $hue >= 0 and $hue <= 1 {
+		@return get-color-from-palette($palette, default, $hue);
+	}
+
+	// We cast the $hue to a string, because some hues starting with a number, like `700-contrast`,
+	// might be inferred as numbers by Sass. Casting them to string fixes the map lookup.
+	$color: if(map.has-key($palette, $hue), map.get($palette, $hue), map.get($palette, $hue + ''));
+
+	@if (meta.type-of($color) != color) {
+		// If the $color resolved to something different from a color (e.g. a CSS variable),
+		// we can't apply the opacity anyway so we return the value as is, otherwise Sass can
+		// throw an error or output something invalid.
+		@return $color;
+	}
+
+	@return rgba($color, if($opacity == null, opacity($color), $opacity));
+}

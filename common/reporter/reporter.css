@@ -1,0 +1,227 @@
+#reporter {
+  --base: black;
+  --divider: rgba(0, 0, 0, 0.12);
+  --dividers: rgba(0, 0, 0, 0.12);
+  --disabled: rgba(0, 0, 0, 0.38);
+  --disabled-button: rgba(0, 0, 0, 0.26);
+  --disabled-text: rgba(0, 0, 0, 0.38);
+  --elevation: black;
+  --hint-text: rgba(0, 0, 0, 0.38);
+  --secondary-text: rgba(0, 0, 0, 0.54);
+  --icon: rgba(0, 0, 0, 0.54);
+  --icons: rgba(0, 0, 0, 0.54);
+  --text: rgba(0, 0, 0, 0.87);
+  --slider-min: rgba(0, 0, 0, 0.87);
+  --slider-off: rgba(0, 0, 0, 0.26);
+  --slider-off-active: rgba(0, 0, 0, 0.38);
+  --status-bar: #e0e0e0;
+  --app-bar: #f5f5f5;
+  --background: #fafafa;
+  --hover: rgba(0, 0, 0, 0.04);
+  --card: white;
+  --dialog: white;
+  --disabled-button: rgba(0, 0, 0, 0.12);
+  --raised-button: white;
+  --focused-button: rgba(0, 0, 0, 0.12);
+  --selected-button: #e0e0e0;
+  --selected-disabled-button: #bdbdbd;
+  --disabled-button-toggle: #eeeeee;
+  --unselected-chip: #e0e0e0;
+  --disabled-list-option: #eeeeee;
+  --tooltip: #616161;
+  --level-1-color: white;
+  --level-1-bg-color: #1b5e20;
+  --level-2-color: white;
+  --level-2-bg-color: #388e3c;
+  --level-3-color: rgba(0, 0, 0, 0.87);
+  --level-3-bg-color: #4caf50;
+  --level-4-color: rgba(0, 0, 0, 0.87);
+  --level-4-bg-color: #81c784;
+  --level-5-color: rgba(0, 0, 0, 0.87);
+  --level-5-bg-color: #c8e6c9;
+  --on-field: rgba(0, 0, 0, 0.87);
+  --failed-bg-color: #ffcdd2;
+}
+
+#reporter.dark {
+  --base: white;
+  --divider: rgba(255, 255, 255, 0.12);
+  --dividers: rgba(255, 255, 255, 0.12);
+  --disabled: rgba(255, 255, 255, 0.5);
+  --disabled-button: rgba(255, 255, 255, 0.3);
+  --disabled-text: rgba(255, 255, 255, 0.5);
+  --elevation: black;
+  --hint-text: rgba(255, 255, 255, 0.5);
+  --secondary-text: rgba(255, 255, 255, 0.7);
+  --icon: white;
+  --icons: white;
+  --text: white;
+  --slider-min: white;
+  --slider-off: rgba(255, 255, 255, 0.3);
+  --slider-off-active: rgba(255, 255, 255, 0.3);
+  --status-bar: black;
+  --app-bar: #212121;
+  --background: #303030;
+  --hover: rgba(255, 255, 255, 0.04);
+  --card: #424242;
+  --dialog: #424242;
+  --disabled-button: rgba(255, 255, 255, 0.12);
+  --raised-button: #424242;
+  --focused-button: rgba(255, 255, 255, 0.12);
+  --selected-button: #212121;
+  --selected-disabled-button: #424242;
+  --disabled-button-toggle: black;
+  --unselected-chip: #616161;
+  --disabled-list-option: black;
+  --tooltip: #616161;
+  --level-1-color: rgba(0, 0, 0, 0.87);
+  --level-1-bg-color: #c8e6c9;
+  --level-2-color: rgba(0, 0, 0, 0.87);
+  --level-2-bg-color: rgba(129, 199, 132, 0.9);
+  --level-3-color: rgba(0, 0, 0, 0.87);
+  --level-3-bg-color: rgba(76, 175, 80, 0.8);
+  --level-4-color: white;
+  --level-4-bg-color: rgba(56, 142, 60, 0.7);
+  --level-5-color: white;
+  --level-5-bg-color: rgba(27, 94, 32, 0.6);
+  --on-field: white;
+  --failed-bg-color: rgba(183, 28, 28, 0.5);
+}
+
+#reporter {
+  font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px 16px;
+}
+#reporter details {
+  position: relative;
+  flex-grow: 1;
+}
+#reporter details summary {
+  display: block;
+  cursor: pointer;
+  color: var(--secondary-text);
+}
+#reporter details summary:hover {
+  color: var(--text);
+}
+#reporter details pre {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  background-color: var(--tooltip);
+  z-index: 12;
+}
+#reporter pre {
+  font-family: monaco, monospace;
+  margin: 0;
+  padding: 0.5em;
+}
+#reporter table {
+  font-size: 12px;
+  border-collapse: collapse;
+  color: var(--text);
+  background-color: var(--card);
+}
+#reporter th, #reporter td {
+  border: 1px solid var(--divider);
+}
+#reporter thead tr {
+  position: sticky;
+  top: -1px;
+  z-index: 20;
+  background-color: var(--card);
+}
+#reporter thead tr th {
+  padding: 0 0.2em;
+  height: 19px;
+  white-space: nowrap;
+  background-color: var(--card);
+}
+#reporter td {
+  font-size: 12px;
+  padding: 0 0.5em;
+}
+#reporter .spec-group {
+  position: sticky;
+  top: 18px;
+  z-index: 11;
+}
+#reporter .spec-group td {
+  background-color: var(--app-bar);
+  color: var(--text);
+}
+#reporter .spec-group .name {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding-left: 0.5em;
+}
+#reporter .spec-group .score {
+  margin-right: 0.5em;
+}
+#reporter .name {
+  white-space: nowrap;
+}
+#reporter .spec-item .name {
+  padding-left: 2em;
+  color: var(--text);
+  background-color: var(--card);
+}
+#reporter .spec-item .test {
+  vertical-align: top;
+}
+#reporter .spec-item .test.passed {
+  color: var(--level-5-color);
+  background-color: var(--level-5-bg-color);
+}
+#reporter .spec-item .test.passed.level-1 {
+  color: var(--level-1-color);
+  background-color: var(--level-1-bg-color);
+}
+#reporter .spec-item .test.passed.level-2 {
+  color: var(--level-2-color);
+  background-color: var(--level-2-bg-color);
+}
+#reporter .spec-item .test.passed.level-3 {
+  color: var(--level-3-color);
+  background-color: var(--level-3-bg-color);
+}
+#reporter .spec-item .test.passed.level-4 {
+  color: var(--level-4-color);
+  background-color: var(--level-4-bg-color);
+}
+#reporter .spec-item .test.passed.level-5 {
+  color: var(--level-5-color);
+  background-color: var(--level-5-bg-color);
+}
+#reporter .spec-item .test.failed {
+  color: var(--on-failed);
+  background-color: var(--failed-bg-color);
+}
+#reporter .spec-item .test .rme {
+  margin-right: 1em;
+}
+#reporter .spec-item .test .ops {
+  flex-grow: 1;
+  text-align: right;
+}
+#reporter .spec-item .test-result {
+  display: flex;
+}
+#reporter .number {
+  font-family: monaco, monospace;
+}
+#reporter .unit {
+  margin-left: 0.2em;
+}
+
+body {
+  margin: 0;
+}
+
+#reporter {
+  width: 100%;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/*# sourceMappingURL=reporter.css.map */

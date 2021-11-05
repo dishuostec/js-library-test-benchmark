@@ -1,0 +1,20 @@
+@use 'scss/config';
+@use "scss/reporter";
+
+body {
+	margin: 0;
+}
+
+#reporter {
+	width: 100%;
+	@extend %light-theme;
+
+	&.dark {
+		@extend %dark-theme;
+	}
+
+	color: var(--text);
+	background-color: var(--background);
+
+	@extend %reporter;
+}

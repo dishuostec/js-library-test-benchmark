@@ -1,0 +1,146 @@
+%reporter {
+
+	font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 8px 16px;
+
+	details {
+		position: relative;
+		flex-grow: 1;
+
+		summary {
+			display: block;
+			cursor: pointer;
+			color: var(--secondary-text);
+
+			&:hover {
+				color: var(--text);
+			}
+		}
+
+		pre {
+			position: absolute;
+			left: 0;
+			top: 18px;
+			background-color: var(--tooltip);
+			z-index: 12;
+		}
+	}
+
+	pre {
+		font-family: monaco, monospace;
+		margin: 0;
+		padding: 0.5em
+	}
+
+	table {
+		font-size: 12px;
+		border-collapse: collapse;
+		color: var(--text);
+		background-color: var(--card);
+	}
+
+	th, td {
+		border: 1px solid var(--divider);
+	}
+
+	thead tr {
+		position: sticky;
+		top: -1px;
+		z-index: 20;
+		background-color: var(--card);
+
+		th {
+			padding: 0 0.2em;
+			height: 19px;
+			white-space: nowrap;
+			background-color: var(--card);
+		}
+	}
+
+	td {
+		font-size: 12px;
+		padding: 0 0.5em;
+	}
+
+	.spec-group {
+		position: sticky;
+		top: 18px;
+		z-index: 11;
+
+		td {
+			background-color: var(--app-bar);
+			color: var(--text);
+		}
+
+		.name {
+			font-size: 1.2em;
+			font-weight: 200;
+			padding-left: 0.5em;
+		}
+
+		.score {
+			margin-right: 0.5em;
+		}
+	}
+
+	.name {
+		//position: sticky;
+		//left: -1px;
+		//z-index: 10;
+		white-space: nowrap;
+	}
+
+	.spec-item {
+		.name {
+			padding-left: 2em;
+			color: var(--text);
+			background-color: var(--card);
+		}
+
+		.test {
+			vertical-align: top;
+
+			&.passed {
+				color: var(--level-5-color);
+				background-color: var(--level-5-bg-color);
+
+				@for $i from 1 through 5 {
+					&.level-#{$i} {
+						color: var(--level-#{$i}-color);
+						background-color: var(--level-#{$i}-bg-color);
+					}
+				}
+			}
+
+			&.failed {
+				color: var(--on-failed);
+				background-color: var(--failed-bg-color);
+			}
+
+
+			.rme {
+				margin-right: 1em;
+			}
+
+			.ops {
+				flex-grow: 1;
+				text-align: right;
+			}
+
+		}
+
+		.test-result {
+			display: flex;
+		}
+
+	}
+
+	.number {
+		font-family: monaco, monospace;
+	}
+
+	.unit {
+		margin-left: 0.2em;
+	}
+
+}

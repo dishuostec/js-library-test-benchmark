@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use "function" as *;
+@use "palette" as *;
+
+%light-theme {
+	@each $name, $color in $light-theme-foreground-palette {
+		--#{$name}: #{$color};
+	}
+	@each $name, $color in $light-theme-background-palette {
+		--#{$name}: #{$color};
+	}
+
+	@for $i from 1 through 5 {
+		$key: (10 - $i * 2 + 1) * 100;
+		--level-#{$i}-color: #{get-contrast-color-from-palette($green-palette, $key)};
+		--level-#{$i}-bg-color: #{get-color-from-palette($green-palette, $key)};
+	}
+
+	--on-field: #{get-contrast-color-from-palette($red-palette, 100)};
+	--failed-bg-color: #{get-color-from-palette($red-palette, 100)};
+}
+
+%dark-theme {
+	@each $name, $color in $dark-theme-foreground-palette {
+		--#{$name}: #{$color};
+	}
+	@each $name, $color in $dark-theme-background-palette {
+		--#{$name}: #{$color};
+	}
+
+	@for $i from 1 through 5 {
+		$key: ($i * 2 - 1) * 100;
+		--level-#{$i}-color: #{get-contrast-color-from-palette($green-palette, $key)};
+		--level-#{$i}-bg-color: #{get-color-from-palette($green-palette, $key, 1 - ($i - 1)*0.1)};
+	}
+
+	--on-field: #{get-contrast-color-from-palette($red-palette, 900)};
+	--failed-bg-color: #{get-color-from-palette($red-palette, 900, 0.5)};
+}

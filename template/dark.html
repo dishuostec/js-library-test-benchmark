@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>theme test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/reporter/reporter.css">
+</head>
+<body>
+<main id="reporter" class="dark">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th><span>lodash-es/isEqual</span></th>
+				<th><span>dequal</span></th>
+				<th><span>dequal/lite</span></th>
+				<th><span>fast-deep-equal</span></th>
+				<th><span>fast-deep-equal/es6</span></th>
+				<th><span>fast-equals</span></th>
+				<th><span>nano-equal</span></th>
+				<th><span>deep-equal</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="spec-group">
+				<td class="name">scalars</td>
+				<td><span class="score">(292)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(152)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(1103)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(1474)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(192)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(1584)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(154)</span><span>17</span>/<span>17</span></td>
+				<td><span class="score">(236)</span><span>14</span>/<span>17</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal numbers</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.10%</span><span class="ops"><span class="number">177584641</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.21%</span><span class="ops"><span class="number">156088645</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±3.56%</span><span class="ops"><span class="number">857170040</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±1.66%</span><span class="ops"><span class="number">884205183</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.01%</span><span class="ops"><span class="number">162518499</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.71%</span><span class="ops"><span class="number">871376612</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.44%</span><span class="ops"><span class="number">147654087</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.06%</span><span class="ops"><span class="number">175307697</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal numbers</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.85%</span><span class="ops"><span class="number">173248247</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.79%</span><span class="ops"><span class="number">3739326</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.82%</span><span class="ops"><span class="number">3960736</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±5.68%</span><span class="ops"><span class="number">833880418</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±0.89%</span><span class="ops"><span class="number">93498008</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.55%</span><span class="ops"><span class="number">831138320</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.23%</span><span class="ops"><span class="number">52703712</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.18%</span><span class="ops"><span class="number">171488167</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">number and array are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±0.77%</span><span class="ops"><span class="number">30121494</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.52%</span><span class="ops"><span class="number">5610064</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.66%</span><span class="ops"><span class="number">5665133</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±3.17%</span><span class="ops"><span class="number">879671939</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.54%</span><span class="ops"><span class="number">88789203</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-3">
+					<div class="test-result">
+						<span class="rme">±7.76%</span><span class="ops"><span class="number">818249391</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±0.66%</span><span class="ops"><span class="number">37869349</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.79%</span><span class="ops"><span class="number">35301</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">0 and null are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.77%</span><span class="ops"><span class="number">179085947</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.79%</span><span class="ops"><span class="number">108276664</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±5.43%</span><span class="ops"><span class="number">824127088</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-3">
+					<div class="test-result">
+						<span class="rme">±5.66%</span><span class="ops"><span class="number">811368304</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.66%</span><span class="ops"><span class="number">109171287</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.77%</span><span class="ops"><span class="number">861102552</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±6.18%</span><span class="ops"><span class="number">50326614</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.70%</span><span class="ops"><span class="number">170517534</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal strings</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.64%</span><span class="ops"><span class="number">183019393</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.58%</span><span class="ops"><span class="number">126083900</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.08%</span><span class="ops"><span class="number">877380369</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.82%</span><span class="ops"><span class="number">876076535</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.41%</span><span class="ops"><span class="number">126799049</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.68%</span><span class="ops"><span class="number">874354364</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.28%</span><span class="ops"><span class="number">124481189</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±4.56%</span><span class="ops"><span class="number">158558175</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal strings</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±8.55%</span><span class="ops"><span class="number">153743190</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±3.59%</span><span class="ops"><span class="number">26918742</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±1.72%</span><span class="ops"><span class="number">858830788</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±1.08%</span><span class="ops"><span class="number">887161611</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.84%</span><span class="ops"><span class="number">64069226</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.73%</span><span class="ops"><span class="number">870354935</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±2.17%</span><span class="ops"><span class="number">40387629</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±4.00%</span><span class="ops"><span class="number">165771350</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">empty string and null are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.38%</span><span class="ops"><span class="number">177215328</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±2.40%</span><span class="ops"><span class="number">90068407</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±3.72%</span><span class="ops"><span class="number">892807879</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.15%</span><span class="ops"><span class="number">895176870</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.48%</span><span class="ops"><span class="number">89907583</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.60%</span><span class="ops"><span class="number">878973027</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.17%</span><span class="ops"><span class="number">43145338</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.23%</span><span class="ops"><span class="number">169706836</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">null is equal to null</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.21%</span><span class="ops"><span class="number">177753213</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.50%</span><span class="ops"><span class="number">138225554</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±3.10%</span><span class="ops"><span class="number">859421461</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.76%</span><span class="ops"><span class="number">890747111</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.85%</span><span class="ops"><span class="number">134089389</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±1.96%</span><span class="ops"><span class="number">888496380</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.47%</span><span class="ops"><span class="number">130908292</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.80%</span><span class="ops"><span class="number">177556865</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal booleans (true)</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.79%</span><span class="ops"><span class="number">179169554</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.49%</span><span class="ops"><span class="number">134285681</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.96%</span><span class="ops"><span class="number">873777654</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±5.46%</span><span class="ops"><span class="number">851916671</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.10%</span><span class="ops"><span class="number">134419347</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.39%</span><span class="ops"><span class="number">875105814</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±5.37%</span><span class="ops"><span class="number">120216318</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.84%</span><span class="ops"><span class="number">174239018</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal booleans (false)</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.57%</span><span class="ops"><span class="number">178335664</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.99%</span><span class="ops"><span class="number">133890907</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±3.77%</span><span class="ops"><span class="number">852825470</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±3.84%</span><span class="ops"><span class="number">878677766</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.80%</span><span class="ops"><span class="number">134832158</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±5.78%</span><span class="ops"><span class="number">849345875</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.79%</span><span class="ops"><span class="number">124060038</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±10.01%</span><span class="ops"><span class="number">90896474</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal booleans</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±17.94%</span><span class="ops"><span class="number">79953475</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±3.94%</span><span class="ops"><span class="number">52264387</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±8.79%</span><span class="ops"><span class="number">114617844</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±10.46%</span><span class="ops"><span class="number">116531769</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±8.01%</span><span class="ops"><span class="number">49029211</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.44%</span><span class="ops"><span class="number">860370144</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.60%</span><span class="ops"><span class="number">46684578</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.42%</span><span class="ops"><span class="number">171964525</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">1 and true are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.09%</span><span class="ops"><span class="number">173759969</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.85%</span><span class="ops"><span class="number">5322224</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.01%</span><span class="ops"><span class="number">6106716</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±3.04%</span><span class="ops"><span class="number">851764776</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±0.77%</span><span class="ops"><span class="number">89306021</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.97%</span><span class="ops"><span class="number">871808272</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±4.46%</span><span class="ops"><span class="number">53728365</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected true to equal false</pre>
+						</details>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">0 and false are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.38%</span><span class="ops"><span class="number">173956785</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.24%</span><span class="ops"><span class="number">107218900</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.23%</span><span class="ops"><span class="number">868855382</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-4">
+					<div class="test-result">
+						<span class="rme warn danger">±81.02%</span><span class="ops"><span class="number">567267789</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±3.09%</span><span class="ops"><span class="number">58965749</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±7.39%</span><span class="ops"><span class="number">114035324</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±5.63%</span><span class="ops"><span class="number">37183008</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected true to equal false</pre>
+						</details>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">NaN and NaN are equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±14.40%</span><span class="ops"><span class="number">82454047</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±4.50%</span><span class="ops"><span class="number">49178509</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±6.30%</span><span class="ops"><span class="number">114765402</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn">±9.00%</span><span class="ops"><span class="number">112283367</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±2.56%</span><span class="ops"><span class="number">84889321</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme warn">±9.23%</span><span class="ops"><span class="number">833386690</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.92%</span><span class="ops"><span class="number">108967522</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">0 and -0 are equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.65%</span><span class="ops"><span class="number">177246305</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.17%</span><span class="ops"><span class="number">111227421</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.03%</span><span class="ops"><span class="number">887205736</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±5.26%</span><span class="ops"><span class="number">860838377</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.21%</span><span class="ops"><span class="number">111891562</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±2.92%</span><span class="ops"><span class="number">896099795</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±0.98%</span><span class="ops"><span class="number">113802273</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.28%</span><span class="ops"><span class="number">176570720</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">Infinity and Infinity are equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.09%</span><span class="ops"><span class="number">177867244</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±3.44%</span><span class="ops"><span class="number">123510659</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result">
+						<span class="rme">±5.82%</span><span class="ops"><span class="number">848981494</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±3.60%</span><span class="ops"><span class="number">890490822</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.43%</span><span class="ops"><span class="number">119547437</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-3">
+					<div class="test-result">
+						<span class="rme">±3.07%</span><span class="ops"><span class="number">833036950</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.85%</span><span class="ops"><span class="number">129815061</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.57%</span><span class="ops"><span class="number">174791762</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">Infinity and -Infinity are not equal</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±2.48%</span><span class="ops"><span class="number">170073017</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±2.53%</span><span class="ops"><span class="number">29701772</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±3.30%</span><span class="ops"><span class="number">47344652</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±3.77%</span><span class="ops"><span class="number">864349350</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.15%</span><span class="ops"><span class="number">78117740</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±5.07%</span><span class="ops"><span class="number">850716907</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±3.07%</span><span class="ops"><span class="number">52131287</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme">±1.09%</span><span class="ops"><span class="number">168741767</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">objects</td>
+				<td><span>18</span>/<span>19</span></td>
+				<td><span>18</span>/<span>19</span></td>
+				<td><span>18</span>/<span>19</span></td>
+				<td><span>19</span>/<span>19</span></td>
+				<td><span>19</span>/<span>19</span></td>
+				<td><span>18</span>/<span>19</span></td>
+				<td><span>18</span>/<span>19</span></td>
+				<td><span>17</span>/<span>19</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">empty objects are equal</td>
+				<td class="test passed level-1">
+					<div class="test-result">
+						<span class="rme">±4.56%</span><span class="ops"><span class="number">1865276</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-2">
+					<div class="test-result"><span class="rme">±2.05%</span><span class="ops"><span class="number">21827668</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-3">
+					<div class="test-result">
+						<span class="rme warn">±8.95%</span><span class="ops"><span class="number">28549154</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed level-4">
+					<div class="test-result"><span class="rme">±1.77%</span><span class="ops"><span class="number">18931905</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result"><span class="rme">±1.45%</span><span class="ops"><span class="number">21332013</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-1">
+					<div class="test-result"><span class="rme">±0.94%</span><span class="ops"><span class="number">45815316</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-3">
+					<div class="test-result"><span class="rme">±1.32%</span><span class="ops"><span class="number">22154568</span><span
+						class="unit"
+					>ops</span></span></div>
+				</td>
+				<td class="test passed level-5">
+					<div class="test-result">
+						<span class="rme warn danger">±23.66%</span><span class="ops"><span class="number">3594</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal objects (same properties "order")</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±6.18%</span><span class="ops"><span class="number">1379379</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±3.32%</span><span class="ops"><span class="number">5825295</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±2.57%</span><span class="ops"><span class="number">6909198</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±7.49%</span><span class="ops"><span class="number">8326367</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±3.98%</span><span class="ops"><span class="number">6768107</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result">
+						<span class="rme">±3.23%</span><span class="ops"><span class="number">8526294</span><span class="unit">ops</span></span>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal objects (different properties "order")</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal objects (extra property)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal objects (different property values)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal objects (different properties)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal objects (same sub-properties)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal objects (different sub-property value)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal objects (different sub-property)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">empty array and empty object are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">object with extra undefined properties are not equal #1</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">object with extra undefined properties are not equal #2</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">object with extra undefined properties are not equal #3</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">nulls are equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">null and undefined are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected true to equal false</pre>
+						</details>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">null and empty object are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">undefined and empty object are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">objects with different `toString` functions returning same values are equal</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">objects with `toString` functions returning different values are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">arrays</td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+				<td><span>6</span>/<span>7</span></td>
+				<td><span>7</span>/<span>7</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">two empty arrays are equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal arrays</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal arrays (different item)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal arrays (different length)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal arrays of objects</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal arrays of objects</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">pseudo array and equivalent array are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected true to equal false</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">Date objects</td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+				<td><span>4</span>/<span>4</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal date objects</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal date objects</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">date and string are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">date and object are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">RegExp objects</td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+				<td><span>4</span>/<span>5</span></td>
+				<td><span>5</span>/<span>5</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">equal RegExp objects</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test failed">
+					<div class="test-result">
+						<details>
+							<summary>failed</summary>
+							<pre>expected false to equal true</pre>
+						</details>
+					</div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal RegExp objects (different pattern)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">not equal RegExp objects (different flags)</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">RegExp and string are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">RegExp and object are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">functions</td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+				<td><span>2</span>/<span>2</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">same function is equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">different functions are not equal</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+			<tr class="spec-group">
+				<td class="name">sample objects</td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+				<td><span>1</span>/<span>1</span></td>
+			</tr>
+			<tr class="spec-item">
+				<td class="name">big object</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+				<td class="test passed">
+					<div class="test-result"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+</body>
+</html>
