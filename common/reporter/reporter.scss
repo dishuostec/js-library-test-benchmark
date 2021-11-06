@@ -1,12 +1,25 @@
 @use 'scss/config';
 @use "scss/reporter";
 
-body {
+html {
+	height: 100%;
+	width: 100%;
+}
+
+html, body {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	flex-grow: 1;
+}
+
+body {
 }
 
 #reporter {
-	width: 100%;
+	flex-grow: 1;
+
 	@extend %light-theme;
 
 	&.dark {

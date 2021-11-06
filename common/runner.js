@@ -53,7 +53,7 @@ export function create_runner({
 							const { tests, description: group } = spec;
 
 							for (const test of tests) {
-							
+
 								const { description } = test;
 
 								const issue = known_issues[pkg_name]?.[group]?.[description];

@@ -214,12 +214,21 @@
   margin-left: 0.2em;
 }
 
-body {
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
 }
 
 #reporter {
-  width: 100%;
+  flex-grow: 1;
   color: var(--text);
   background-color: var(--background);
 }
