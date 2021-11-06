@@ -19,6 +19,7 @@ const get_pinned_url = url => new Promise((resolve, reject) => {
 [
 	'deep-equal',
 	'deep-clone',
+	'object-get',
 ].forEach(async module => {
 	const packages = (await import((`./${module}/js/packages.js`))).default;
 
