@@ -13,7 +13,11 @@ import {
 	details,
 	summary,
 } from 'https://unpkg.com/@hyperapp/html?module';
-import { app } from 'https://unpkg.com/hyperapp';
+import { app } from 'https://unpkg.com/hyperapp?module';
+import numeral from 'https://cdn.skypack.dev/numeral';
+
+const format = (v) => numeral(v).format('0.0a');
+
 import {
 	BENCHMARK_BEGIN,
 	BENCHMARK_END,
@@ -144,10 +148,11 @@ export default function create_reporter(specs, pkgs) {
 																	// 		danger: stats.rme > 20,
 																	// 	}],
 																	// }, text(`\xb1${stats.rme.toFixed(2)}%`)),
-																	span({ class: 'ops' }, [
-																		span({ class: 'number' }, text(stats.ops.toFixed(stats.ops < 100 ? 2 : 0))),
-																		span({ class: 'unit' }, text('ops')),
-
+																	span({
+																		class: 'ops',
+																		title: `${stats.ops.toFixed(stats.ops < 100 ? 2 : 0)} ops`,
+																	}, [
+																		span({ class: 'number' }, text(format(stats.ops))),
 																	]),
 																],
 															].flat(),
