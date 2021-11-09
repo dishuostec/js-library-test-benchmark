@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tests and benchmark for className libraries</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/common/reporter/reporter.css" />
+</head>
+<body>
+<div id="reporter"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash"></script>
+<script src="https://cdn.jsdelivr.net/npm/chai/chai.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mocha/mocha.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/benchmark/benchmark.js"></script>
+
+<script type="module">
+	import run from './js/run.js';
+
+	await run();
+</script>
+</body>
+</html>
